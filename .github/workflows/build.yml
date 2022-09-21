@@ -16,13 +16,16 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: install emscripten
-        run: brew install emscripten
+        run: # brew install emscripten
 
       - name: show all files
+        shell: bash
         run: pwd && ls
 
       - name: install dependencies
+        shell: bash
         run: yarn
 
       - name: build project
+        shell: bash
         run: yarn build
