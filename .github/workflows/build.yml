@@ -18,7 +18,12 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: install emscripten
-        run: brew install emscripten
+        run: |
+          git clone https://github.com/emscripten-core/emsdk.git
+          cd emsdk
+          ./emsdk install latest
+          ./emsdk activate latest
+          source ./emsdk_env.sh
 
       - name: install dependencies
         shell: bash
