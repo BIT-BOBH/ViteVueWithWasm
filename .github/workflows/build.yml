@@ -16,7 +16,8 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: install emscripten
-        run: # brew install emscripten
+        shell: bash
+        run: ls
 
       - name: show all files
         shell: bash
