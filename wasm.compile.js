@@ -30,7 +30,8 @@ SourceFiles.forEach(srcFile=>{
   finalArgs.push(SourceDir + srcFile);
 });
 
-// console.log(finalArgs);
+console.log(finalArgs);
+
 let ret = childProcess.spawnSync(Compiler, finalArgs);
 if(ret.status == 0){
   console.log("Compile wasm files successfully!");
