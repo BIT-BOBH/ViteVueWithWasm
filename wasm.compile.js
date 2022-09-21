@@ -32,7 +32,9 @@ SourceFiles.forEach(srcFile=>{
 
 console.log(finalArgs);
 
-let ret = childProcess.spawnSync(Compiler, finalArgs);
+let ret = childProcess.spawnSync(Compiler, finalArgs,{
+  stdio: 'inherit'
+});
 if(ret.status == 0){
   console.log("Compile wasm files successfully!");
   // copy the wasm file
