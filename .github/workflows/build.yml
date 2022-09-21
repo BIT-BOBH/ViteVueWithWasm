@@ -18,15 +18,12 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: install emscripten
-        shell: bash
         run: brew install emscripten
 
       - name: install dependencies
-        shell: bash
         run: yarn
 
       - name: build project
-        shell: bash
         run: yarn build
 
       - name: Upload dist
