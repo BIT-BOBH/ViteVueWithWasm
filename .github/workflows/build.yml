@@ -1,0 +1,25 @@
+name: Build the template
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  release:
+    types: released
+
+job:
+  build:
+    name: Build vue
+    runs-on: macos-latest
+    steps:
+      - name: install emscripten
+        run: brew install emscripten
+
+      - name: install dependencies
+        run: yarn
+
+      - name: build project
+        run: yarn build
