@@ -10,7 +10,7 @@ on:
   release:
     types: released
 
-job:
+jobs:
   build:
     name: Build vue
     runs-on: macos-latest
