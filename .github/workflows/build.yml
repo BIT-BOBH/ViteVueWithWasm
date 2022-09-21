@@ -17,8 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: install emscripten
-        run: brew install emscripten
+      - uses: mymindstorm/setup-emsdk@v11
 
       - name: install dependencies
         run: yarn
