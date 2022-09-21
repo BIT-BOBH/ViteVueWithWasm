@@ -16,14 +16,9 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      
-      - name: install emscripten
-        shell: bash
-        run: ls
 
-      - name: show all files
-        shell: bash
-        run: cd .. && pwd && ls
+      - name: install emscripten
+        run: brew install emscripten
 
       - name: install dependencies
         shell: bash
