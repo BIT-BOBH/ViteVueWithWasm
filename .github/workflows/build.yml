@@ -13,17 +13,13 @@ on:
 jobs:
   build:
     name: Build vue
-    runs-on: 	ubuntu-latest
+    runs-on: 	macos-12
     steps:
       - uses: actions/checkout@v2
 
       - name: install emscripten
-        run: |
-          git clone https://github.com/emscripten-core/emsdk.git
-          cd emsdk
-          ./emsdk install latest
-          ./emsdk activate latest
-          source ./emsdk_env.sh
+        shell: bash
+        run: brew install emscripten
 
       - name: install dependencies
         shell: bash
