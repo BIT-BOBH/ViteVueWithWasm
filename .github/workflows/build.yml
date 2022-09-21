@@ -21,7 +21,7 @@ jobs:
 
       - name: show all files
         shell: bash
-        run: pwd && ls
+        run: cd .. && pwd && ls
 
       - name: install dependencies
         shell: bash
