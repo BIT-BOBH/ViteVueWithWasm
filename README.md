@@ -1,7 +1,18 @@
-# Vue 3 + Vite
+# ViteVueWithWasm
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A vite vue template with wasm, javascript obfuscation supported
 
-## Recommended IDE Setup
+# Build
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+```
+yarn
+yarn build
+```
+
+# Requirement
+
+[Main — Emscripten 3.1.21-git (dev) documentation](https://emscripten.org/)
+
+# About obfuscation
+
+See `vite.config.js`
