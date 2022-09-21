@@ -27,3 +27,10 @@ jobs:
       - name: build project
         shell: bash
         run: yarn build
+
+      - name: Upload dist
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist.zip
+          path: ./dist
+          if-no-files-found: error
