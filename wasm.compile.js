@@ -46,6 +46,6 @@ if(ret.status == 0){
   fs.writeFileSync("./src/webassembly.js", originJs + extraCode);
 }else{
   console.log("Compile wasm files failed!");
-  console.log(ret.stderr.toString());
+  console.log(ret);
   throw new Error("Compile wasm files failed!");
 }
