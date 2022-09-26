@@ -11,6 +11,9 @@ let CallFib = ()=>{
   alert("Fib(6) is " + res);
 }
 
+console.log("Hello!");
+console.log(import.meta.env);
+console.log(import.meta.env.VITE_BOBH);
 </script>
 
 <template>

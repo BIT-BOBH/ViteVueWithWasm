@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import legacy from '@vitejs/plugin-legacy'
 // javascript obfuscator
 import { obfuscator } from 'rollup-obfuscator';
 
@@ -8,6 +9,9 @@ import { obfuscator } from 'rollup-obfuscator';
 export default defineConfig({
   plugins: [
     vue(),
+    legacy({
+      targets: ['defaults']
+    }),
     obfuscator({
       // see https://github.com/javascript-obfuscator/javascript-obfuscator#javascript-obfuscator-options
       compact: true,
